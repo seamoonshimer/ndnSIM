@@ -1,0 +1,94 @@
+# EdgeComputer-1.0.txt
+
+router
+
+#name   city    latitude  longitude
+#cloud
+c1      NA      -10        65
+
+#edge 1 (Gateway)
+g1      NA    	-30        65
+#edge 2 (out Switch)
+s1      NA    	-40        35
+s2      NA    	-40        95
+#edge 3 (Core Switch)
+s3      NA    	-50        20
+s4      NA    	-50        50
+s5      NA    	-50        80
+s6      NA    	-50        110
+#edge 4 (Route + Edge-Device)
+r1      NA    	-60        10
+r2      NA    	-60        20
+r3      NA    	-60        30
+r4      NA    	-60        40
+r5      NA    	-60        50
+r6      NA    	-60        60
+r7      NA    	-60        70
+r8      NA    	-60        80
+r9      NA    	-60        90
+r10     NA      -60        100
+r11     NA      -60        110
+r12     NA      -60        120
+
+#user 
+u1      NA    	-80        10
+u2      NA    	-80        20
+u3      NA    	-80        30
+u4      NA    	-80        40
+u5      NA    	-80        50
+u6      NA      -80        60
+u7      NA      -80        70
+u8      NA      -80        80
+u9      NA      -80        90
+u10     NA      -80        100
+u11     NA      -80        110
+u12     NA      -80        120
+
+link
+#x      y       capacity        OSPF    Delay   MaxPackets
+
+# Cloud to Gateway
+c1      g1      10240Mbps       1       20ms    100
+
+# Gateway to out switch (edge 1)
+g1      s1      10240Mbps       1       1ms     100 
+g1      s2      10240Mbps       1       1ms     100
+
+# Out switch to core switch (edge 2)
+s1      s3      10240Mbps       1       1ms     100 
+s1      s4      10240Mbps       1       1ms     100
+s1      s5      10240Mbps       5       1ms     100
+s1      s6      10240Mbps       5       1ms     100
+s2      s3      10240Mbps       5       1ms     100
+s2      s4      10240Mbps       5       1ms     100
+s2      s5      10240Mbps       1       1ms     100
+s2      s6      10240Mbps       1       1ms     100
+
+# Core switch to Route + Edge Device (edge 3)
+s3      r1      1024Mbps        1       1ms     100
+s3      r2      1024Mbps        1       1ms     100
+s3      r3      1024Mbps        1       1ms     100
+s4      r4      1024Mbps        1       1ms     100
+s4      r5      1024Mbps        1       1ms     100
+s4      r6      1024Mbps        1       1ms     100
+s5      r7      1024Mbps        1       1ms     100
+s5      r8      1024Mbps        1       1ms     100
+s5      r9      1024Mbps        1       1ms     100
+s6      r10     1024Mbps        1       1ms     100
+s6      r11     1024Mbps        1       1ms     100
+s6      r12     1024Mbps        1       1ms     100
+
+# Route to User (edge 4)
+r1      u1      100Mbps         1       1ms     100
+r2      u2      100Mbps         1       1ms     100
+r3      u3      100Mbps         1       1ms     100
+r4      u4      100Mbps         1       1ms     100
+r5      u5      100Mbps         1       1ms     100
+r6      u6      100Mbps         1       1ms     100
+r7      u7      100Mbps         1       1ms     100
+r8      u8      100Mbps         1       1ms     100
+r9      u9      100Mbps         1       1ms     100
+r10     u10     100Mbps         1       1ms     100
+r11     u11     100Mbps         1       1ms     100
+r12     u12     100Mbps         1       1ms     100
+

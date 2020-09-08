@@ -1,0 +1,186 @@
+/* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
+/**
+ * Copyright (c) 2011-2015  Regents of the University of California.
+ *
+ * This file is part of ndnSIM. See AUTHORS for complete list of ndnSIM authors and
+ * contributors.
+ *
+ * ndnSIM is free software: you can redistribute it and/or modify it under the terms
+ * of the GNU General Public License as published by the Free Software Foundation,
+ * either version 3 of the License, or (at your option) any later version.
+ *
+ * ndnSIM is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+ * PURPOSE.  See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * ndnSIM, e.g., in COPYING.md file.  If not, see <http://www.gnu.org/licenses/>.
+ **/
+
+// EdgeComputer.cpp
+
+#include "ns3/core-module.h"
+#include "ns3/network-module.h"
+#include "ns3/ndnSIM-module.h"
+
+namespace ns3 {
+
+int
+main(int argc, char* argv[])
+{
+  CommandLine cmd;
+  cmd.Parse(argc, argv);
+
+  AnnotatedTopologyReader topologyReader("", 1);
+  topologyReader.SetFileName("ndnsim/topologies/EdgeComputer-1.0.txt");
+  topologyReader.Read();
+
+  // 安装 NDN 协议栈
+  ndn::StackHelper ndnHelper;
+    // 简单替换
+  ndnHelper.SetOldContentStore("ns3::ndn::cs::Nocache");
+//  ndnHelper.SetOldContentStore("ns3::ndn::cs::Lru");
+//  ndnHelper.SetOldContentStore("ns3::ndn::cs::Fifo");
+//  ndnHelper.SetOldContentStore("ns3::ndn::cs::Lfu");
+//  ndnHelper.SetOldContentStore("ns3::ndn::cs::Random");
+
+    // 生存时间
+//  ndnHelper.SetOldContentStore("ns3::ndn::cs::Stats::Lru");
+//  ndnHelper.SetOldContentStore("ns3::ndn::cs::Stats::Fifo");
+//  ndnHelper.SetOldContentStore("ns3::ndn::cs::Stats::Lfu");
+//  ndnHelper.SetOldContentStore("ns3::ndn::cs::Stats::Random");
+    
+    // 新鲜度
+//  ndnHelper.SetOldContentStore("ns3::ndn::cs::Freshness::Lru");
+//  ndnHelper.SetOldContentStore("ns3::ndn::cs::Freshness::Fifo");
+//  ndnHelper.SetOldContentStore("ns3::ndn::cs::Freshness::Lfu");
+//  ndnHelper.SetOldContentStore("ns3::ndn::cs::Freshness::Random");
+    
+    // 概率性
+//  ndnHelper.SetOldContentStore("ns3::ndn::cs::Probability::Lru");
+//  ndnHelper.SetOldContentStore("ns3::ndn::cs::Probability::Fifo");
+//  ndnHelper.SetOldContentStore("ns3::ndn::cs::Probability::Lfu");
+//  ndnHelper.SetOldContentStore("ns3::ndn::cs::Probability::Random");
+
+  ndnHelper.InstallAll();
+
+/*    
+  // 设置 CS 内容存储库的容量，
+    // 云中心
+  Config::Set("/NodeList/0/$ns3::ndn::ContentStore/MaxSize", UintegerValue(1000));
+  
+    // 网关
+  Config::Set("/NodeList/1/$ns3::ndn::ContentStore/MaxSize", UintegerValue(200));
+  
+    // 出口交换器 
+  Config::Set("/NodeList/2/$ns3::ndn::ContentStore/MaxSize", UintegerValue(150));
+  Config::Set("/NodeList/3/$ns3::ndn::ContentStore/MaxSize", UintegerValue(150));
+  
+    // 核心交换器
+  Config::Set("/NodeList/4/$ns3::ndn::ContentStore/MaxSize", UintegerValue(100));
+  Config::Set("/NodeList/5/$ns3::ndn::ContentStore/MaxSize", UintegerValue(100));
+  Config::Set("/NodeList/6/$ns3::ndn::ContentStore/MaxSize", UintegerValue(100));
+  Config::Set("/NodeList/7/$ns3::ndn::ContentStore/MaxSize", UintegerValue(100));
+  
+    // 路由器 + 边缘设备
+  Config::Set("/NodeList/8/$ns3::ndn::ContentStore/MaxSize", UintegerValue(50));
+  Config::Set("/NodeList/9/$ns3::ndn::ContentStore/MaxSize", UintegerValue(50));
+  Config::Set("/NodeList/10/$ns3::ndn::ContentStore/MaxSize", UintegerValue(50));
+  Config::Set("/NodeList/11/$ns3::ndn::ContentStore/MaxSize", UintegerValue(50));
+  Config::Set("/NodeList/12/$ns3::ndn::ContentStore/MaxSize", UintegerValue(50));
+  Config::Set("/NodeList/13/$ns3::ndn::ContentStore/MaxSize", UintegerValue(50));
+  Config::Set("/NodeList/14/$ns3::ndn::ContentStore/MaxSize", UintegerValue(50));
+  Config::Set("/NodeList/15/$ns3::ndn::ContentStore/MaxSize", UintegerValue(50));
+  Config::Set("/NodeList/16/$ns3::ndn::ContentStore/MaxSize", UintegerValue(50));
+  Config::Set("/NodeList/17/$ns3::ndn::ContentStore/MaxSize", UintegerValue(50));
+  Config::Set("/NodeList/18/$ns3::ndn::ContentStore/MaxSize", UintegerValue(50));
+  Config::Set("/NodeList/19/$ns3::ndn::ContentStore/MaxSize", UintegerValue(50));
+  
+    // 用户
+  Config::Set("/NodeList/20/$ns3::ndn::ContentStore/MaxSize", UintegerValue(1));
+  Config::Set("/NodeList/21/$ns3::ndn::ContentStore/MaxSize", UintegerValue(1));
+  Config::Set("/NodeList/22/$ns3::ndn::ContentStore/MaxSize", UintegerValue(1));
+  Config::Set("/NodeList/23/$ns3::ndn::ContentStore/MaxSize", UintegerValue(1));
+  Config::Set("/NodeList/24/$ns3::ndn::ContentStore/MaxSize", UintegerValue(1));
+  Config::Set("/NodeList/25/$ns3::ndn::ContentStore/MaxSize", UintegerValue(1));
+  Config::Set("/NodeList/26/$ns3::ndn::ContentStore/MaxSize", UintegerValue(1));
+  Config::Set("/NodeList/27/$ns3::ndn::ContentStore/MaxSize", UintegerValue(1));
+  Config::Set("/NodeList/28/$ns3::ndn::ContentStore/MaxSize", UintegerValue(1));
+  Config::Set("/NodeList/29/$ns3::ndn::ContentStore/MaxSize", UintegerValue(1));
+  Config::Set("/NodeList/30/$ns3::ndn::ContentStore/MaxSize", UintegerValue(1));
+  Config::Set("/NodeList/31/$ns3::ndn::ContentStore/MaxSize", UintegerValue(1));
+*/
+
+  // 设置路由策略为 最佳路径
+  ndn::StrategyChoiceHelper::InstallAll("/", "/localhost/nfd/strategy/best-route");
+//  ndn::StrategyChoiceHelper::InstallAll("/", "/localhost/nfd/strategy/multicast");
+//  ndn::StrategyChoiceHelper::InstallAll("/", "/localhost/nfd/strategy/ncc");
+//  ndn::StrategyChoiceHelper::InstallAll("/", "/localhost/nfd/strategy/client-control");
+
+  // 在所有节点上安装路由接口
+  ndn::GlobalRoutingHelper ndnGlobalRoutingHelper;
+  ndnGlobalRoutingHelper.InstallAll();
+
+  // 获得消费者/生产者容器
+  Ptr<Node> producer = Names::Find<Node>("c1");
+  NodeContainer consumerNodes;
+  consumerNodes.Add(Names::Find<Node>("u1"));
+  consumerNodes.Add(Names::Find<Node>("u2"));
+  consumerNodes.Add(Names::Find<Node>("u3"));
+  consumerNodes.Add(Names::Find<Node>("u4"));
+  consumerNodes.Add(Names::Find<Node>("u5"));
+  consumerNodes.Add(Names::Find<Node>("u6"));
+  consumerNodes.Add(Names::Find<Node>("u7"));
+  consumerNodes.Add(Names::Find<Node>("u8"));
+  consumerNodes.Add(Names::Find<Node>("u9"));
+  consumerNodes.Add(Names::Find<Node>("u10"));
+  consumerNodes.Add(Names::Find<Node>("u11"));
+  consumerNodes.Add(Names::Find<Node>("u12"));
+
+  // 安装 NDN 应用 - 消费者
+  std::string prefix = "/prefix";                                       // 前缀
+//  ndn::AppHelper consumerHelper("ns3::ndn::ConsumerCbr");
+//  ndn::AppHelper consumerHelper("ns3::ndn::ConsumerBatches");
+//  ndn::AppHelper consumerHelper("ns3::ndn::ConsumerWindow");
+//  ndn::AppHelper consumerHelper("ns3::ndn::ConsumerPcon");
+  ndn::AppHelper consumerHelper("ns3::ndn::ConsumerZipfMandelbrot");    // Zipf 分布的兴趣包请求，默认100种类型的内容请求
+  consumerHelper.SetPrefix(prefix);                                     // 设置兴趣包前缀
+  consumerHelper.SetAttribute("Frequency", StringValue("50"));          // 设置兴趣包请求频率
+  consumerHelper.SetAttribute("NumberOfContents", StringValue("1000"));  // 设置兴趣包种类
+  //consumerHelper.SetAttribute ("Randomize", StringValue ("uniform")); // 设置随机属性
+  consumerHelper.Install(consumerNodes);
+
+  // 安装 NDN 应用 - 生产者
+  ndn::AppHelper producerHelper("ns3::ndn::Producer");
+  producerHelper.SetPrefix(prefix);
+  producerHelper.SetAttribute("PayloadSize", StringValue("1024"));
+  producerHelper.Install(producer);
+
+  // 添加生成源前缀到全局路由
+  ndnGlobalRoutingHelper.AddOrigins(prefix, producer);
+
+  // 计算全局路由，填充 FIB 表
+//  ndn::GlobalRoutingHelper::CalculateLfidRoutes();
+  ndn::GlobalRoutingHelper::CalculateRoutes();
+//  ndn::GlobalRoutingHelper::CalculateAllPossibleRoutes();
+
+  ndn::AppDelayTracer::InstallAll("1-1-Packet-delays-trace.txt");
+  ndn::CsTracer::InstallAll("1-1-Cache-hit-trace.txt");
+  ndn::L3RateTracer::InstallAll("1-1-Traffic-trace.txt");
+  L2RateTracer::InstallAll("1-1-Drop-trace.txt");
+
+  // 设置实验时长
+  Simulator::Stop(Seconds(100.0));
+  Simulator::Run();
+  Simulator::Destroy();
+
+  return 0;
+}
+
+} // namespace ns3
+
+int
+main(int argc, char* argv[])
+{
+  return ns3::main(argc, argv);
+}
