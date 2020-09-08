@@ -1,0 +1,563 @@
+# tree-topology.txt
+# 5-layer
+router
+
+#name   city    latitude  longitude
+
+# Cloud
+Cloud   NA      -10        205
+
+# Gateway
+G1      NA    	-30        205
+
+# Core Switch
+C1      NA    	-40        70
+C2      NA    	-40        205
+C3      NA    	-40        340
+
+# Middle Switch
+M1      NA    	-50        25
+M2      NA    	-50        70
+M3      NA    	-50        115
+
+M4      NA    	-50        160
+M5      NA    	-50        205
+M6      NA    	-50        250
+
+M7      NA    	-50        295
+M8      NA    	-50        340
+M9      NA    	-50        385
+
+# Edge Switch
+E1      NA    	-60        10
+E2      NA    	-60        25
+E3      NA    	-60        40
+
+E4      NA    	-60        55
+E5      NA    	-60        70
+E6      NA    	-60        85
+
+E7      NA    	-60        100
+E8      NA    	-60        115
+E9      NA    	-60        130
+
+E10     NA    	-60        145
+E11     NA    	-60        160
+E12     NA    	-60        175
+
+E13     NA    	-60        190
+E14     NA    	-60        205
+E15     NA    	-60        220
+
+E16     NA    	-60        235
+E17     NA    	-60        250
+E18     NA    	-60        265
+
+E19     NA    	-60        280
+E20     NA    	-60        295
+E21     NA    	-60        310
+
+E22     NA    	-60        325
+E23     NA    	-60        340
+E24     NA    	-60        355
+
+E25     NA    	-60        370
+E26     NA    	-60        385
+E27     NA    	-60        400
+
+# Room Switch
+R1      NA    	-80        5
+R2      NA    	-80        10
+R3      NA    	-80        15
+
+R4      NA    	-80        20
+R5      NA    	-80        25
+R6      NA      -80        30
+
+R7      NA      -80        35
+R8      NA      -80        40
+R9      NA      -80        45
+
+R10     NA      -80        50
+R11     NA      -80        55
+R12     NA      -80        60
+
+R13     NA      -80        65
+R14     NA      -80        70
+R15     NA      -80        75
+
+R16     NA      -80        80
+R17     NA      -80        85
+R18     NA      -80        90
+
+R19     NA      -80        95
+R20     NA      -80        100
+R21     NA      -80        105
+
+R22     NA      -80        110
+R23     NA      -80        115
+R24     NA      -80        120
+
+R25     NA      -80        125
+R26     NA      -80        130
+R27     NA      -80        135
+
+R28     NA      -80        140
+R29     NA      -80        145
+R30     NA      -80        150
+
+R31     NA      -80        155
+R32     NA      -80        160
+R33     NA      -80        165
+
+R34     NA      -80        170
+R35     NA      -80        175
+R36     NA      -80        180
+
+R37     NA      -80        185
+R38     NA      -80        190
+R39     NA      -80        195
+
+R40     NA      -80        200
+R41     NA      -80        205
+R42     NA      -80        210
+
+R43     NA      -80        215
+R44     NA      -80        220
+R45     NA      -80        225
+
+R46     NA      -80        230
+R47     NA      -80        235
+R48     NA      -80        240
+
+R49     NA      -80        245
+R50     NA      -80        250
+R51     NA      -80        255
+
+R52     NA      -80        260
+R53     NA      -80        265
+R54     NA      -80        270
+
+R55     NA      -80        275
+R56     NA      -80        280
+R57     NA      -80        285
+
+R58     NA      -80        290
+R59     NA      -80        295
+R60     NA      -80        300
+
+R61     NA      -80        305
+R62     NA      -80        310
+R63     NA      -80        315
+
+R64     NA      -80        320
+R65     NA      -80        325
+R66     NA      -80        330
+
+R67     NA      -80        335
+R68     NA      -80        340
+R69     NA      -80        345
+
+R70     NA      -80        350
+R71     NA      -80        355
+R72     NA      -80        360
+
+R73     NA      -80        365
+R74     NA      -80        370
+R75     NA      -80        375
+
+R76     NA      -80        380
+R77     NA      -80        385
+R78     NA      -80        390
+
+R79     NA      -80        395
+R80     NA      -80        400
+R81     NA      -80        405
+
+# User 
+U1      NA    	-100        5
+U2      NA    	-100        10
+U3      NA    	-100        15
+
+U4      NA    	-100        20
+U5      NA    	-100        25
+U6      NA      -100        30
+
+U7      NA      -100        35
+U8      NA      -100        40
+U9      NA      -100        45
+
+U10     NA      -100        50
+U11     NA      -100        55
+U12     NA      -100        60
+
+U13     NA      -100        65
+U14     NA      -100        70
+U15     NA      -100        75
+
+U16     NA      -100        80
+U17     NA      -100        85
+U18     NA      -100        90
+
+U19     NA      -100        95
+U20     NA      -100        100
+U21     NA      -100        105
+
+U22     NA      -100        110
+U23     NA      -100        115
+U24     NA      -100        120
+
+U25     NA      -100        125
+U26     NA      -100        130
+U27     NA      -100        135
+
+U28     NA      -100        140
+U29     NA      -100        145
+U30     NA      -100        150
+
+U31     NA      -100        155
+U32     NA      -100        160
+U33     NA      -100        165
+
+U34     NA      -100        170
+U35     NA      -100        175
+U36     NA      -100        180
+
+U37     NA      -100        185
+U38     NA      -100        190
+U39     NA      -100        195
+
+U40     NA      -100        200
+U41     NA      -100        205
+U42     NA      -100        210
+
+U43     NA      -100        215
+U44     NA      -100        220
+U45     NA      -100        225
+
+U46     NA      -100        230
+U47     NA      -100        235
+U48     NA      -100        240
+
+U49     NA      -100        245
+U50     NA      -100        250
+U51     NA      -100        255
+
+U52     NA      -100        260
+U53     NA      -100        265
+U54     NA      -100        270
+
+U55     NA      -100        275
+U56     NA      -100        280
+U57     NA      -100        285
+
+U58     NA      -100        290
+U59     NA      -100        295
+U60     NA      -100        300
+
+U61     NA      -100        305
+U62     NA      -100        310
+U63     NA      -100        315
+
+U64     NA      -100        320
+U65     NA      -100        325
+U66     NA      -100        330
+
+U67     NA      -100        335
+U68     NA      -100        340
+U69     NA      -100        345
+
+U70     NA      -100        350
+U71     NA      -100        355
+U72     NA      -100        360
+
+U73     NA      -100        365
+U74     NA      -100        370
+U75     NA      -100        375
+
+U76     NA      -100        380
+U77     NA      -100        385
+U78     NA      -100        390
+
+U79     NA      -100        395
+U80     NA      -100        400
+U81     NA      -100        405
+
+link
+#x      y       capacity        OSPF    Delay   MaxPackets
+
+# Cloud to Gateway
+Cloud   G1      1024Mbps       1       500ms   100
+
+# Gateway to Core
+G1      C1      100Mbps        1       1ms     100 
+G1      C2      100Mbps        1       1ms     100
+G1      C3      100Mbps        1       1ms     100
+
+# Core to Middle
+C1      M1      100Mbps        1       1ms     100 
+C1      M2      100Mbps        1       1ms     100
+C1      M3      100Mbps        1       1ms     100
+
+C2      M4      100Mbps        1       1ms     100
+C2      M5      100Mbps        1       1ms     100
+C2      M6      100Mbps        1       1ms     100
+
+C3      M7      100Mbps        1       1ms     100
+C3      M8      100Mbps        1       1ms     100
+C3      M9      100Mbps        1       1ms     100
+
+# Middle to Edge
+M1      E1      100Mbps        1       1ms     100
+M1      E2      100Mbps        1       1ms     100
+M1      E3      100Mbps        1       1ms     100
+
+M2      E4      100Mbps        1       1ms     100
+M2      E5      100Mbps        1       1ms     100
+M2      E6      100Mbps        1       1ms     100
+
+M3      E7      100Mbps        1       1ms     100
+M3      E8      100Mbps        1       1ms     100
+M3      E9      100Mbps        1       1ms     100
+
+M4      E10      100Mbps        1       1ms     100
+M4      E11      100Mbps        1       1ms     100
+M4      E12      100Mbps        1       1ms     100
+
+M5      E13      100Mbps        1       1ms     100
+M5      E14      100Mbps        1       1ms     100
+M5      E15      100Mbps        1       1ms     100
+
+M6      E16      100Mbps        1       1ms     100
+M6      E17      100Mbps        1       1ms     100
+M6      E18      100Mbps        1       1ms     100
+
+M7      E19      100Mbps        1       1ms     100
+M7      E20      100Mbps        1       1ms     100
+M7      E21      100Mbps        1       1ms     100
+
+M8      E22      100Mbps        1       1ms     100
+M8      E23      100Mbps        1       1ms     100
+M8      E24      100Mbps        1       1ms     100
+
+M9      E25      100Mbps        1       1ms     100
+M9      E26      100Mbps        1       1ms     100
+M9      E27      100Mbps        1       1ms     100
+
+# Edge to Room
+E1      R1      100Mbps        1       1ms     100
+E1      R2      100Mbps        1       1ms     100
+E1      R3      100Mbps        1       1ms     100
+
+E2      R4      100Mbps        1       1ms     100
+E2      R5      100Mbps        1       1ms     100
+E2      R6      100Mbps        1       1ms     100
+
+E3      R7      100Mbps        1       1ms     100
+E3      R8      100Mbps        1       1ms     100
+E3      R9      100Mbps        1       1ms     100
+
+E4      R10     100Mbps        1       1ms     100
+E4      R11     100Mbps        1       1ms     100
+E4      R12     100Mbps        1       1ms     100
+
+E5      R13     100Mbps        1       1ms     100
+E5      R14     100Mbps        1       1ms     100
+E5      R15     100Mbps        1       1ms     100
+
+E6      R16     100Mbps        1       1ms     100
+E6      R17     100Mbps        1       1ms     100
+E6      R18     100Mbps        1       1ms     100
+
+E7      R19     100Mbps        1       1ms     100
+E7      R20     100Mbps        1       1ms     100
+E7      R21     100Mbps        1       1ms     100
+
+E8      R22     100Mbps        1       1ms     100
+E8      R23     100Mbps        1       1ms     100
+E8      R24     100Mbps        1       1ms     100
+
+E9      R25     100Mbps        1       1ms     100
+E9      R26     100Mbps        1       1ms     100
+E9      R27     100Mbps        1       1ms     100
+
+E10      R28     100Mbps        1       1ms     100
+E10      R29     100Mbps        1       1ms     100
+E10      R30     100Mbps        1       1ms     100
+
+E11      R31     100Mbps        1       1ms     100
+E11      R32     100Mbps        1       1ms     100
+E11      R33     100Mbps        1       1ms     100
+
+E12      R34     100Mbps        1       1ms     100
+E12      R35     100Mbps        1       1ms     100
+E12      R36     100Mbps        1       1ms     100
+
+E13      R37     100Mbps        1       1ms     100
+E13      R38     100Mbps        1       1ms     100
+E13      R39     100Mbps        1       1ms     100
+
+E14      R40     100Mbps        1       1ms     100
+E14      R41     100Mbps        1       1ms     100
+E14      R42     100Mbps        1       1ms     100
+
+E15      R43     100Mbps        1       1ms     100
+E15      R44     100Mbps        1       1ms     100
+E15      R45     100Mbps        1       1ms     100
+
+E16      R46     100Mbps        1       1ms     100
+E16      R47     100Mbps        1       1ms     100
+E16      R48     100Mbps        1       1ms     100
+
+E17      R49     100Mbps        1       1ms     100
+E17      R50     100Mbps        1       1ms     100
+E17      R51     100Mbps        1       1ms     100
+
+E18      R52     100Mbps        1       1ms     100
+E18      R53     100Mbps        1       1ms     100
+E18      R54     100Mbps        1       1ms     100
+
+E19      R55     100Mbps        1       1ms     100
+E19      R56     100Mbps        1       1ms     100
+E19      R57     100Mbps        1       1ms     100
+
+E20      R58     100Mbps        1       1ms     100
+E20      R59     100Mbps        1       1ms     100
+E20      R60     100Mbps        1       1ms     100
+
+E21      R61     100Mbps        1       1ms     100
+E21      R62     100Mbps        1       1ms     100
+E21      R63     100Mbps        1       1ms     100
+
+E22      R64     100Mbps        1       1ms     100
+E22      R65     100Mbps        1       1ms     100
+E22      R66     100Mbps        1       1ms     100
+
+E23      R67     100Mbps        1       1ms     100
+E23      R68     100Mbps        1       1ms     100
+E23      R69     100Mbps        1       1ms     100
+
+E24      R70     100Mbps        1       1ms     100
+E24      R71     100Mbps        1       1ms     100
+E24      R72     100Mbps        1       1ms     100
+
+E25      R73     100Mbps        1       1ms     100
+E25      R74     100Mbps        1       1ms     100
+E25      R75     100Mbps        1       1ms     100
+
+E26      R76     100Mbps        1       1ms     100
+E26      R77     100Mbps        1       1ms     100
+E26      R78     100Mbps        1       1ms     100
+
+E27      R79     100Mbps        1       1ms     100
+E27      R80     100Mbps        1       1ms     100
+E27      R81     100Mbps        1       1ms     100
+
+# Room to User
+R1      U1      100Mbps        1       1ms     100
+R2      U2      100Mbps        1       1ms     100
+R3      U3      100Mbps        1       1ms     100
+
+R4      U4      100Mbps        1       1ms     100
+R5      U5      100Mbps        1       1ms     100
+R6      U6      100Mbps        1       1ms     100
+
+R7      U7      100Mbps        1       1ms     100
+R8      U8      100Mbps        1       1ms     100
+R9      U9      100Mbps        1       1ms     100
+
+R10     U10     100Mbps        1       1ms     100
+R11     U11     100Mbps        1       1ms     100
+R12     U12     100Mbps        1       1ms     100
+
+R13     U13     100Mbps        1       1ms     100
+R14     U14     100Mbps        1       1ms     100
+R15     U15     100Mbps        1       1ms     100
+
+R16     U16     100Mbps        1       1ms     100
+R17     U17     100Mbps        1       1ms     100
+R18     U18     100Mbps        1       1ms     100
+
+R19     U19     100Mbps        1       1ms     100
+R20     U20     100Mbps        1       1ms     100
+R21     U21     100Mbps        1       1ms     100
+
+R22     U22     100Mbps        1       1ms     100
+R23     U23     100Mbps        1       1ms     100
+R24     U24     100Mbps        1       1ms     100
+
+R25     U25     100Mbps        1       1ms     100
+R26     U26     100Mbps        1       1ms     100
+R27     U27     100Mbps        1       1ms     100
+
+R28     U28     100Mbps        1       1ms     100
+R29     U29     100Mbps        1       1ms     100
+R30     U30     100Mbps        1       1ms     100
+
+R31     U31     100Mbps        1       1ms     100
+R32     U32     100Mbps        1       1ms     100
+R33     U33     100Mbps        1       1ms     100
+
+R34     U34     100Mbps        1       1ms     100
+R35     U35     100Mbps        1       1ms     100
+R36     U36     100Mbps        1       1ms     100
+
+R37     U37     100Mbps        1       1ms     100
+R38     U38     100Mbps        1       1ms     100
+R39     U39     100Mbps        1       1ms     100
+
+R40     U40     100Mbps        1       1ms     100
+R41     U41     100Mbps        1       1ms     100
+R42     U42     100Mbps        1       1ms     100
+
+R43     U43     100Mbps        1       1ms     100
+R44     U44     100Mbps        1       1ms     100
+R45     U45     100Mbps        1       1ms     100
+
+R46     U46     100Mbps        1       1ms     100
+R47     U47     100Mbps        1       1ms     100
+R48     U48     100Mbps        1       1ms     100
+
+R49     U49     100Mbps        1       1ms     100
+R50     U50     100Mbps        1       1ms     100
+R51     U51     100Mbps        1       1ms     100
+
+R52     U52     100Mbps        1       1ms     100
+R53     U53     100Mbps        1       1ms     100
+R54     U54     100Mbps        1       1ms     100
+
+R55     U55     100Mbps        1       1ms     100
+R56     U56     100Mbps        1       1ms     100
+R57     U57     100Mbps        1       1ms     100
+
+R58     U58     100Mbps        1       1ms     100
+R59     U59     100Mbps        1       1ms     100
+R60     U60     100Mbps        1       1ms     100
+
+R61     U61     100Mbps        1       1ms     100
+R62     U62     100Mbps        1       1ms     100
+R63     U63     100Mbps        1       1ms     100
+
+R64     U64     100Mbps        1       1ms     100
+R65     U65     100Mbps        1       1ms     100
+R66     U66     100Mbps        1       1ms     100
+
+R67     U67     100Mbps        1       1ms     100
+R68     U68     100Mbps        1       1ms     100
+R69     U69     100Mbps        1       1ms     100
+
+R70     U70     100Mbps        1       1ms     100
+R71     U71     100Mbps        1       1ms     100
+R72     U72     100Mbps        1       1ms     100
+
+R73     U73     100Mbps        1       1ms     100
+R74     U74     100Mbps        1       1ms     100
+R75     U75     100Mbps        1       1ms     100
+
+R76     U76     100Mbps        1       1ms     100
+R77     U77     100Mbps        1       1ms     100
+R78     U78     100Mbps        1       1ms     100
+
+R79     U79     100Mbps        1       1ms     100
+R80     U80     100Mbps        1       1ms     100
+R81     U81     100Mbps        1       1ms     100

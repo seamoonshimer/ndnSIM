@@ -70,60 +70,60 @@ link
 #x      y       capacity        OSPF    Delay   MaxPackets
 
 # Cloud to Gateway
-Cloud   G1      10240Mbps       1       100ms   100
+Cloud   G1      1024Mbps       1       500ms   100
 
 # Gateway to Core
-G1      C1      1024Mbps        1       1ms     100 
-G1      C2      1024Mbps        1       1ms     100
+G1      C1      100Mbps        1       1ms     100 
+G1      C2      100Mbps        1       1ms     100
 
 # Core to Middle
-C1      M1      1024Mbps        1       1ms     100 
-C1      M2      1024Mbps        1       1ms     100
-C2      M3      1024Mbps        1       1ms     100
-C2      M4      1024Mbps        1       1ms     100
+C1      M1      100Mbps        1       1ms     100 
+C1      M2      100Mbps        1       1ms     100
+C2      M3      100Mbps        1       1ms     100
+C2      M4      100Mbps        1       1ms     100
 
 # Middle to Edge
-M1      E1      1024Mbps        1       1ms     100
-M1      E2      1024Mbps        1       1ms     100
-M2      E3      1024Mbps        1       1ms     100
-M2      E4      1024Mbps        1       1ms     100
-M3      E5      1024Mbps        1       1ms     100
-M3      E6      1024Mbps        1       1ms     100
-M4      E7      1024Mbps        1       1ms     100
-M4      E8      1024Mbps        1       1ms     100
+M1      E1      100Mbps        1       1ms     100
+M1      E2      100Mbps        1       1ms     100
+M2      E3      100Mbps        1       1ms     100
+M2      E4      100Mbps        1       1ms     100
+M3      E5      100Mbps        1       1ms     100
+M3      E6      100Mbps        1       1ms     100
+M4      E7      100Mbps        1       1ms     100
+M4      E8      100Mbps        1       1ms     100
 
 # Edge to Room
-E1      R1      1024Mbps        1       1ms     100
-E1      R2      1024Mbps        1       1ms     100
-E2      R3      1024Mbps        1       1ms     100
-E2      R4      1024Mbps        1       1ms     100
-E3      R5      1024Mbps        1       1ms     100
-E3      R6      1024Mbps        1       1ms     100
-E4      R7      1024Mbps        1       1ms     100
-E4      R8      1024Mbps        1       1ms     100
-E5      R9      1024Mbps        1       1ms     100
-E5      R10     1024Mbps        1       1ms     100
-E6      R11     1024Mbps        1       1ms     100
-E6      R12     1024Mbps        1       1ms     100
-E7      R13     1024Mbps        1       1ms     100
-E7      R14     1024Mbps        1       1ms     100
-E8      R15     1024Mbps        1       1ms     100
-E8      R16     1024Mbps        1       1ms     100
+E1      R1      100Mbps        1       1ms     100
+E1      R2      100Mbps        1       1ms     100
+E2      R3      100Mbps        1       1ms     100
+E2      R4      100Mbps        1       1ms     100
+E3      R5      100Mbps        1       1ms     100
+E3      R6      100Mbps        1       1ms     100
+E4      R7      100Mbps        1       1ms     100
+E4      R8      100Mbps        1       1ms     100
+E5      R9      100Mbps        1       1ms     100
+E5      R10     100Mbps        1       1ms     100
+E6      R11     100Mbps        1       1ms     100
+E6      R12     100Mbps        1       1ms     100
+E7      R13     100Mbps        1       1ms     100
+E7      R14     100Mbps        1       1ms     100
+E8      R15     100Mbps        1       1ms     100
+E8      R16     100Mbps        1       1ms     100
 
 # Room to User
-R1      U1      1024Mbps        1       1ms     100
-R2      U2      1024Mbps        1       1ms     100
-R3      U3      1024Mbps        1       1ms     100
-R4      U4      1024Mbps        1       1ms     100
-R5      U5      1024Mbps        1       1ms     100
-R6      U6      1024Mbps        1       1ms     100
-R7      U7      1024Mbps        1       1ms     100
-R8      U8      1024Mbps        1       1ms     100
-R9      U9      1024Mbps        1       1ms     100
-R10     U10     1024Mbps        1       1ms     100
-R11     U11     1024Mbps        1       1ms     100
-R12     U12     1024Mbps        1       1ms     100
-R13     U13     1024Mbps        1       1ms     100
-R14     U14     1024Mbps        1       1ms     100
-R15     U15     1024Mbps        1       1ms     100
-R16     U16     1024Mbps        1       1ms     100
+R1      U1      100Mbps        1       1ms     100
+R2      U2      100Mbps        1       1ms     100
+R3      U3      100Mbps        1       1ms     100
+R4      U4      100Mbps        1       1ms     100
+R5      U5      100Mbps        1       1ms     100
+R6      U6      100Mbps        1       1ms     100
+R7      U7      100Mbps        1       1ms     100
+R8      U8      100Mbps        1       1ms     100
+R9      U9      100Mbps        1       1ms     100
+R10     U10     100Mbps        1       1ms     100
+R11     U11     100Mbps        1       1ms     100
+R12     U12     100Mbps        1       1ms     100
+R13     U13     100Mbps        1       1ms     100
+R14     U14     100Mbps        1       1ms     100
+R15     U15     100Mbps        1       1ms     100
+R16     U16     100Mbps        1       1ms     100
